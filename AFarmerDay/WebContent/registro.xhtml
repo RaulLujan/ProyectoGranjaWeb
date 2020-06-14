@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+	<title>Resgistro</title>
+</h:head>
+<h:body style="padding-top: 120px">
+<b:form>
+		<b:navBar style="padding:5px; " fixed="top" inverse="true">
+			<b:navbarLinks pull="left">
+				<b:navLink>
+					<b:commandButton value="Inicio" action="index.xhtml" look="primary" style="padding: 0" />
+				</b:navLink>
+				<b:navLink>
+					<b:commandButton value="Clasificación" action="clasificacion.xhtml" look="primary" style="padding: 0" />
+				</b:navLink>
+				<b:navLink>
+					<b:commandButton value="Información" action="info.xhtml" look="primary" style="padding: 0" />
+				</b:navLink>
+			</b:navbarLinks>
+			<b:navbarLinks pull="right">
+			<b:navLink>
+					<b:commandButton value="Identificarse" action="login.xhtml" look="primary" style="padding: 0" />
+				</b:navLink>
+			</b:navbarLinks>
+		</b:navBar>
+	</b:form>
+	<b:container>
+		
+			<b:form >
+			<b:row>
+				<b:column>
+					<b:well style="padding:20px; width : 90%">
+				
+					
+						<h1 style="margin-bottom: 30px; color:#E67E22;">Resgistro</h1>
+					
+						<h:panelGrid  style="width : 100%" columns="3" >
+							
+							<b:inputText required="true" id="nombre" style="width : 80%" label="Nombre" value="#{login.nombre}" /> 
+							<br></br>
+							<b:inputText required="true" id="apellidos" style="width : 80%"  label="Apellidos"  value="#{login.apellidos}"/>
+							
+							<b:inputText required="true" id="fecha" style="width : 80%" label="Fehca nacimiento" value="#{login.fecha}" />
+							<br></br>
+							<b:inputText required="true" id="telefono" style="width : 80%" label="Telefono" value="#{login.telefono}" />
+							 
+							<b:inputText required="true" id="login" disabled="#{login.activo}" style="width : 80%" label="Login" value="#{login.login}" /> 
+							<br></br>
+							<b:inputText required="true" id="correo" style="width : 80%" label="Correo" value="#{login.correo}"/>
+							
+							<b:inputSecret required="true" id="pass" disabled="#{login.activo}" style="width : 80%"  label="Contraseña" value="#{login.pass}" />
+							<br></br>
+							<b:inputText required="true" id="Granja"  disabled="#{login.activo}" style="width : 80%" label="Granja" value="#{login.nombreGranja}"/>
+							
+							<b:inputSecret required="true" id="pass2" disabled="#{login.activo}" style="width : 80%" label="Repita Contraseña" value="#{login.pass2}"/>
+							<br></br>
+							<b:inputText required="true" id="Cooperativa"  style="width : 80%" label="Cooperativa" value="#{login.nombreCooperativa}"/>
+							
+							
+						</h:panelGrid>
+						
+						<b:row>
+							<b:column >
+								<h:panelGrid  style="width : 40%" columns="2" >
+									<b:selectBooleanCheckbox  id="terminos"
+									required="true" label="Terminos de Uso" />
+									<b:column style="margin-top:30px;">
+										<p>Acepto los términos y condiciones.</p>
+									</b:column>
+							</h:panelGrid>
+							</b:column>
+					</b:row>
+					<h:panelGrid columns="2" style="margin-top:30px"> 
+						<b:commandButton action="#{login.registrar()}" value="#{login.regisOmod}"
+							style="margin-right:6px" look="primary" />
+				
+							
+						<b:link href="index.xhtml" value="Volver"
+							style="margin-left:6px" look="info" />	
+								
+					</h:panelGrid> 
+					<b:row>
+							<b:column style="margin-top: 12px">
+								<b:message for="nombre"/>
+								<b:message for="apellidos" />
+								<b:message for="fecha"/>
+								<b:message for="telefono" />
+								<b:message for="correo" />
+								<b:message for="Granja"/>
+								<b:message for="Cooperativa" />
+								<b:message for="login"/>
+								<b:message for="pass" />
+								<b:message for="pass2"/>
+								<b:message for="terminos"/>
+							</b:column>
+					</b:row>
+					</b:well>
+				</b:column>		
+			</b:row>				
+		</b:form>
+		
+		
+		<b:navBar sticky="true" 
+			brand=" @2020 Raúl Luján - José Martínez"
+			brand-style="font-size: 12px; align-self: center;" fixed="bottom">
+			<b:navbarLinks pull="right">
+				<b:navLink style="margin-bottom: 20px; padding: 0; opacity: 0.7">
+					<b:row>
+						<b:link>
+							<b:image height="35px" library="social" name="twitter.svg"
+								style="margin-right: 10px" />
+						</b:link>
+						<b:link>
+							<b:image height="35px" library="social" name="facebook.svg"
+								style="margin-right: 10px" />
+						</b:link>
+						<b:link>
+							<b:image height="35px" library="social" name="linkedin.svg"
+								style="margin-right: 10px" />
+						</b:link>
+						<b:link>
+							<b:image height="35px" library="social" name="whatsapp.svg" />
+						</b:link>
+					</b:row>
+				</b:navLink>
+			</b:navbarLinks>
+		</b:navBar>
+	</b:container>
+</h:body>
+</html>

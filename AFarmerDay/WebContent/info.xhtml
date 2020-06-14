@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+	<title>Informacion</title>
+</h:head>
+<h:body style="padding-top: 100px">
+	<b:form>
+		<b:navBar style="padding:5px;  margin-bottom:5%;" fixed="top" inverse="true">
+			<b:navbarLinks pull="left">
+				<b:navLink>
+					<b:commandButton value="Inicio" action="index.xhtml" look="primary" style="padding: 0" />
+				</b:navLink>
+				<b:navLink>
+					<b:commandButton value="Clasificación" action="clasificacion.xhtml" look="primary" style="padding: 0" />
+				</b:navLink>
+				<b:navLink>
+					<b:commandButton value="Información" action="info.xhtml" look="primary" style="padding: 0" />
+				</b:navLink>
+			</b:navbarLinks>
+			<b:navbarLinks pull="right">
+			<b:navLink>
+					<b:commandButton value="Identificarse" action="login.xhtml" look="primary" style="padding: 0" />
+				</b:navLink>
+			</b:navbarLinks>
+		</b:navBar>
+	</b:form>
+	<b:container style="width : 90%;">
+		<b:form style="width : 100%;">
+			<b:container style=" width : 100%;">
+			<b:row>
+		 <b:column col-md="6">
+				<b:well style="margin-right:55px; margin-left:35px; margin-top:55px; padding:40px;">
+					<h1 style="color:#E67E22;" >A Farmer´s Day</h1>
+					<p style="font-size:120%; margin-top:30px;">En "A Farmer´s Day" te pondrás al 
+					frente de una granja operativa desde el
+					primermomento.
+					Pódras decir que y cuando plantar,
+					abonar tus campose invertir recursos
+					para consegur otros. Junto a tus
+					vecinos y cooperativa tendrás asegurada
+					una experiencia increible...</p>
+				
+				</b:well>
+				 </b:column>
+			<b:column col-md="6">
+					<b:image  style="width : 100%;" library="images" name="campo.jpg"></b:image>
+				 </b:column>
+			
+			</b:row>
+				
+		</b:container>
+			<b:well style=" width : 100%; margin-top:80px; margin-bottom:180px; margin-left:22px;">
+				<h1 style="color:#E67E22; margin-bottom:10px; margin-left:10px;">Guías:</h1>
+				<b:container style=" width : 100%;">
+					<b:row>
+				   <b:column col-md="3">
+				  	<b:commandButton  look="success"  style="font-size: 150%; margin: 10px; padding:10%; "
+				  	 value="Cultivos" action="infoCultivos.xhtml">
+				  	 <b:image name="cultivo.png" library="icons" height="40px"></b:image>
+				  	</b:commandButton>
+				  	 </b:column>
+				  	 <b:column col-md="3">
+				  <b:commandButton  look="danger"  style="font-size: 150%; margin: 10px; padding:10%;  "
+				  	 value="Animales" action="infoAnimales.xhtml">
+				  	 <b:image name="vaca.png" library="icons" height="40px"></b:image>
+				  	</b:commandButton>
+				  		 </b:column>
+				  	<b:column col-md="3">
+				  	<b:commandButton  look="info"  style="font-size: 150%; margin: 10px; padding:10%;  "
+				  	 value="Materiales" action="infoMateriales.xhtml">
+				  	 <b:image name="material.png" library="icons" height="40px"></b:image>
+				  	</b:commandButton>
+				  		 </b:column>
+				  	<b:column col-md="3">
+				  	<b:commandButton  look="warning"  style="font-size: 150%; margin: 10px; padding:10%; "
+				  	 value="Infraestructuras" action="infoEdificios.xhtml">
+				  	 <b:image name="edificio.png" library="icons" height="40px"></b:image>
+				  	</b:commandButton>
+				  		 </b:column>
+			
+					</b:row>
+				</b:container>
+			</b:well>
+		</b:form>
+		<b:navBar sticky="true"
+			brand=" @2020 Raúl Luján - José Martínez 2ªDAM IES Alquerías"
+			brand-style="font-size: 12px; align-self: center;" fixed="bottom">
+			<b:navbarLinks pull="right">
+				<b:navLink style="margin-bottom: 20px; padding: 0; opacity: 0.7">
+					<b:row>
+						<b:link>
+							<b:image height="35px" library="social" name="twitter.svg"
+								style="margin-right: 10px" />
+						</b:link>
+						<b:link>
+							<b:image height="35px" library="social" name="facebook.svg"
+								style="margin-right: 10px" />
+						</b:link>
+						<b:link>
+							<b:image height="35px" library="social" name="linkedin.svg"
+								style="margin-right: 10px" />
+						</b:link>
+						<b:link>
+							<b:image height="35px" library="social" name="whatsapp.svg" />
+						</b:link>
+					</b:row>
+				</b:navLink>
+			</b:navbarLinks>
+		</b:navBar>
+	</b:container>
+</h:body>
+</html>

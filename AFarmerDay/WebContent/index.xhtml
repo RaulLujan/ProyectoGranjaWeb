@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+	<title>Inicio</title>
+</h:head>
+<h:body style="display: flex; justify-content: center;">
+	<b:form>
+		<b:navBar style="margin-top: 20px ;  padding:5px; " fixed="top"
+			inverse="true">
+			<b:navbarLinks pull="left">
+				<b:navLink>
+					<b:commandButton value="Inicio" action="index.xhtml" look="primary"
+						style="padding: 0" />
+				</b:navLink>
+				<b:navLink>
+					<b:commandButton value="Clasificación" action="clasificacion.xhtml"
+						look="primary" style="padding: 0" />
+				</b:navLink>
+				<b:navLink>
+					<b:commandButton value="Información" action="info.xhtml"
+						look="primary" style="padding: 0" />
+				</b:navLink>
+			</b:navbarLinks>
+			<b:navbarLinks pull="right">
+				<b:navLink>
+					<b:commandButton value="Identificarse" action="login.xhtml"
+						look="primary" style="padding: 0" />
+				</b:navLink>
+			</b:navbarLinks>
+		</b:navBar>
+	</b:form>
+	<b:container style=" margin-top:75px; width : 100%; height:100%; ">
+		<b:row style="width : 100%; height:100%">
+
+			<b:column style="width : 100%; height:100%">
+
+				<b:image library="images" name="index.png"
+					style="width : 81%; margin-left:10%;"></b:image>
+
+			</b:column>
+
+		</b:row>
+		<b:navBar style="margin-bottom: 10px  " sticky="true"
+			class="navbar navbar-expand-lg navbar-light bg-light"
+			brand=" @2020 Raúl Luján - José Martínez"
+			brand-style="font-size: 12px; align-self: center;" fixed="bottom">
+			<b:navbarLinks pull="right">
+				<b:navLink style="margin-bottom: 20px; padding: 0; opacity: 0.7">
+					<b:row>
+						<b:link>
+							<b:image height="35px" library="social" name="twitter.svg"
+								style="margin-right: 10px" />
+						</b:link>
+						<b:link>
+							<b:image height="35px" library="social" name="facebook.svg"
+								style="margin-right: 10px" />
+						</b:link>
+						<b:link>
+							<b:image height="35px" library="social" name="linkedin.svg"
+								style="margin-right: 10px" />
+						</b:link>
+						<b:link>
+							<b:image height="35px" library="social" name="whatsapp.svg" />
+						</b:link>
+					</b:row>
+				</b:navLink>
+			</b:navbarLinks>
+		</b:navBar>
+	</b:container>
+</h:body>
+</html>
